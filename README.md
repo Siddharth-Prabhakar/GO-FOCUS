@@ -4,11 +4,12 @@ A honest Chrome extension that motivates you to stay focused by blocking distrac
 
 ## Installation
 
-1. Clone or download this repository
-2. Open Chrome and navigate to `chrome://extensions/`
-3. Enable "Developer mode" in the top right
-4. Click "Load unpacked" and select the extension folder
-5. The extension icon should appear in your toolbar
+1. Download this zip file of repository.
+2. Extract all files from zip.
+3. Open Chrome or Chromium-based browsers and navigate to `chrome://extensions/`
+4. Enable "Developer mode" in the top right
+5. Click "Load unpacked" and select the extension folder
+6. The extension icon should appear in your toolbar
 
 ## Usage
 
