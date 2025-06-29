@@ -1,6 +1,33 @@
-# GO FOCUS - Site Blocker Extension
+# GO FOCUS - Extension
 
-A brutally honest Chrome extension that motivates you to stay focused by blocking distracting websites with harsh motivational messages and a cyberpunk 3D look.
+A honest Chrome extension that motivates you to stay focused by blocking distracting websites with reality-check motivational messages and a cyberpunk 3D look.
+
+## Installation
+
+1. Clone or download this repository
+2. Open Chrome and navigate to `chrome://extensions/`
+3. Enable "Developer mode" in the top right
+4. Click "Load unpacked" and select the extension folder
+5. The extension icon should appear in your toolbar
+
+## Usage
+
+1. **Add Sites to Block**:
+   - Click the extension icon
+   - Enter a domain (e.g., "youtube.com")
+   - Click "Block Site"
+
+2. **Remove Sites**:
+   - Click "Remove" next to a blocked site
+   - Choose "Success – I'm Strong" to keep it blocked
+   - Choose "Failure – Remove Anyway" to unblock
+
+3. **When Sites Are Blocked**:
+   - You'll see a motivational quote
+   - The robot will speak the message
+   - Click the quote to get a new one
+   - Use the mute button to toggle audio
+   - Quotes auto-update every 15 seconds
 
 ## Features
 
@@ -98,32 +125,7 @@ A brutally honest Chrome extension that motivates you to stay focused by blockin
 - Button hover effects
 - Text glow animations
 
-## Installation
 
-1. Clone or download this repository
-2. Open Chrome and navigate to `chrome://extensions/`
-3. Enable "Developer mode" in the top right
-4. Click "Load unpacked" and select the extension folder
-5. The extension icon should appear in your toolbar
-
-## Usage
-
-1. **Add Sites to Block**:
-   - Click the extension icon
-   - Enter a domain (e.g., "youtube.com")
-   - Click "Block Site"
-
-2. **Remove Sites**:
-   - Click "Remove" next to a blocked site
-   - Choose "Success – I'm Strong" to keep it blocked
-   - Choose "Failure – Remove Anyway" to unblock
-
-3. **When Sites Are Blocked**:
-   - You'll see a motivational quote
-   - The robot will speak the message
-   - Click the quote to get a new one
-   - Use the mute button to toggle audio
-   - Quotes auto-update every 15 seconds
 
 ## Customization
 
