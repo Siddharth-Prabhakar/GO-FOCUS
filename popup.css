@@ -1,0 +1,335 @@
+/**
+ * Popup Styles for Brutal Focus Extension
+ * Styles for the extension popup interface
+ */
+
+/* CSS Variables for consistent theming */
+:root {
+    --primary-color: #ff3e3e;
+    --secondary-color: #2a2a72;
+    --accent-color: #00ff88;
+    --background: #1a1a2e;
+    --text-color: #ffffff;
+}
+
+/* Base body styles */
+body {
+    width: 400px;
+    margin: 0;
+    padding: 0;
+    background: var(--background);
+    color: var(--text-color);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    overflow: hidden;
+}
+
+/* Main container */
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Header section */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0;
+    color: #ff3e3e;
+    background: none;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+    animation: none;
+    /* 3D effect */
+    text-shadow:
+        2px 2px 0 #222,
+        4px 4px 0 #111,
+        1px 1px 8px #ff3e3e,
+        0 4px 16px #0008;
+    transform: perspective(180px) rotateX(8deg);
+    letter-spacing: 2px;
+    font-weight: 900;
+}
+
+/* Input group styling */
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #ff3e3e;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #ff3e3e;
+    box-shadow: 0 0 10px #ff3e3e;
+}
+
+/* Glow button styling */
+.glow-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(45deg, #ff3e3e, #b30000);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: none;
+}
+
+.glow-button:hover {
+    transform: translateY(-2px);
+    box-shadow: none;
+}
+
+/* Blocked sites section */
+.blocked-sites {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 15px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.blocked-sites h2 {
+    margin-top: 0;
+    font-size: 1.2em;
+    color: #ff3e3e;
+}
+
+/* Blocked sites list */
+#blockedList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#blockedList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    margin: 5px 0;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+#blockedList li:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+}
+
+/* Delete button styling */
+.delete-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+    background: #ff1a1a;
+    transform: scale(1.1);
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+}
+
+/* Animated background stripe */
+.stripe {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+.stripe_inner {
+    width: 100vw;
+    height: 100vh;
+    background: repeating-linear-gradient(
+        45deg,
+        #000000 25%,
+        #000000 50%,
+        #000000 50%,
+        #000000 75%
+    );
+    background-size: 100px 100px;
+    animation: stripeBackgroundPosition 2s linear infinite;
+    opacity: 0.45;
+    transition: transform 0.3s ease;
+}
+
+/* Stripe animation */
+@keyframes stripeBackgroundPosition {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -100px 0;
+    }
+}
+
+/* Popup foreground content */
+.popup-foreground {
+    position: relative;
+    z-index: 1;
+}
+
+/* Matrix Rain Button Styles */
+.btn {
+  position: relative;
+  padding: 1.5rem 3rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 30px;
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+
+.matrix {
+  background: #000;
+  border: 2px solid #0f0;
+  color: #0f0;
+}
+
+.matrix-label {
+  position: relative;
+  z-index: 2;
+  color: #0f0;
+  text-shadow: 0 0 8px #000, 0 0 2px #000, 0 0 12px #000;
+}
+
+.code-rain {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  opacity: 1;
+  z-index: 1;
+}
+
+.rain-drop {
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #0f0 0%, rgba(0,255,0,0.5) 80%, transparent 100%);
+  animation: rain 1.2s linear infinite;
+  animation-delay: calc(var(--i) * 0.18s);
+  border-radius: 2px;
+}
+
+@keyframes rain {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0.7;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+.matrix:hover {
+  box-shadow: 0 0 20px 10px #0f0;
+  background: #111;
+  outline: none;
+}
+
+.matrix:hover .matrix-label {
+  color: #fff;
+  text-shadow: 0 0 8px #000, 0 0 2px #0f0, 0 0 12px #000;
+}
+
+.popup-border-outer {
+    border: 2px solid #00ff00;
+    border-radius: 0;
+    box-sizing: border-box;
+    padding: 3px;
+    width: 100%;
+}
+
+.heartbeat {
+    display: inline-block;
+    animation: heartbeat 1.2s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+        text-shadow: 0 0 10px #ff3e3e, 0 0 20px #ff3e3e;
+    }
+    10% {
+        transform: scale(1.04);
+        text-shadow: 0 0 14px #ff3e3e, 0 0 28px #ff3e3e;
+    }
+    20% {
+        transform: scale(1.08);
+        text-shadow: 0 0 18px #ff3e3e, 0 0 36px #ff3e3e;
+    }
+    30% {
+        transform: scale(1.12);
+        text-shadow: 0 0 22px #ff3e3e, 0 0 44px #ff3e3e;
+    }
+    40% {
+        transform: scale(1.08);
+        text-shadow: 0 0 18px #ff3e3e, 0 0 36px #ff3e3e;
+    }
+    50% {
+        transform: scale(1.04);
+        text-shadow: 0 0 14px #ff3e3e, 0 0 28px #ff3e3e;
+    }
+    60%, 100% {
+        transform: scale(1);
+        text-shadow: 0 0 10px #ff3e3e, 0 0 20px #ff3e3e;
+    }
+} 

@@ -1,0 +1,59 @@
+{
+  // Manifest version for Chrome extension
+  "manifest_version": 3,
+  
+  // Extension name and version
+  "name": "GO FOCUS",
+  "version": "1.0",
+  
+  // Extension description
+  "description": "A brutally honest site blocker that motivates you to stay focused",
+  
+  // Required permissions for the extension
+  "permissions": [
+    "storage",        // For storing blocked sites
+    "tabs",          // For managing browser tabs
+    "scripting",     // For injecting content scripts
+    "webNavigation", // For intercepting navigation
+    "activeTab"      // For accessing current tab
+  ],
+  
+  // Host permissions for accessing all URLs
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  
+  // Extension popup configuration
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  
+  // Background service worker
+  "background": {
+    "service_worker": "background.js"
+  },
+  
+  // Extension icons
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  
+  // Web accessible resources for content scripts
+  "web_accessible_resources": [{
+    "resources": ["blocked.html", "modal.css"],
+    "matches": ["<all_urls>"]
+  }],
+  
+  // Content scripts configuration
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "css": ["modal.css"]
+  }]
+} 

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="modal.css">
+    <style>
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(8px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 999999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 20px;
+            padding: 3rem;
+            width: 90%;
+            max-width: 800px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 0 50px rgba(255, 0, 0, 0.3);
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(255, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .modal-overlay.active .modal-content {
+            transform: scale(1);
+        }
+
+        .modal-main {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            width: 100%;
+        }
+
+        .quote-container {
+            flex: 1;
+            text-align: left;
+        }
+
+        .quote {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            font-weight: bold;
+            line-height: 1.3;
+            color: #ff0000;
+            text-shadow: 
+                0 0 10px #ff0000,
+                0 0 20px #ff0000,
+                0 0 30px #ff0000;
+            animation: textGlow 2s ease-in-out infinite alternate;
+        }
+
+        .modal-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        @keyframes textGlow {
+            from { 
+                text-shadow: 
+                    0 0 10px #ff0000,
+                    0 0 20px #ff0000,
+                    0 0 30px #ff0000;
+            }
+            to { 
+                text-shadow: 
+                    0 0 20px #ff0000,
+                    0 0 30px #ff0000,
+                    0 0 40px #ff0000;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="modal-border-outer">
+        <div class="modal-overlay" id="modalOverlay">
+            <div class="modal-content">
+                <div class="modal-main">
+                    <div class="quote-container">
+                        <div class="quote">It's your life, stay average<br><br><span class="heartbeat" style="text-decoration: underline;">You want that?</span></div>
+                    </div>
+                </div>
+                <div class="modal-buttons">
+                    <button class="btn matrix" id="successButton">
+                      <span class="matrix-label">Success – I'm Strong</span>
+                      <div class="code-rain">
+                        <div class="rain-drop" style="--i:0; animation-delay: -0.7s;"></div>
+                        <div class="rain-drop" style="--i:1; animation-delay: -0.3s;"></div>
+                        <div class="rain-drop" style="--i:2; animation-delay: -1.0s;"></div>
+                        <div class="rain-drop" style="--i:3; animation-delay: -0.1s;"></div>
+                        <div class="rain-drop" style="--i:4; animation-delay: -0.9s;"></div>
+                        <div class="rain-drop" style="--i:5; animation-delay: -0.5s;"></div>
+                        <div class="rain-drop" style="--i:6; animation-delay: -1.1s;"></div>
+                        <div class="rain-drop" style="--i:7; animation-delay: -0.2s;"></div>
+                      </div>
+                    </button>
+                    <button class="btn matrix" id="failureButton">
+                      <span class="matrix-label">Failure – Remove Anyway</span>
+                      <div class="code-rain">
+                        <div class="rain-drop" style="--i:0; animation-delay: -0.7s;"></div>
+                        <div class="rain-drop" style="--i:1; animation-delay: -0.3s;"></div>
+                        <div class="rain-drop" style="--i:2; animation-delay: -1.0s;"></div>
+                        <div class="rain-drop" style="--i:3; animation-delay: -0.1s;"></div>
+                        <div class="rain-drop" style="--i:4; animation-delay: -0.9s;"></div>
+                        <div class="rain-drop" style="--i:5; animation-delay: -0.5s;"></div>
+                        <div class="rain-drop" style="--i:6; animation-delay: -1.1s;"></div>
+                        <div class="rain-drop" style="--i:7; animation-delay: -0.2s;"></div>
+                      </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Brutal Focus</title>
+    <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="warning-popup.css">
+    <link rel="stylesheet" href="modal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="popup-border-outer">
+        <div class="stripe">
+            <div class="stripe_inner"></div>
+        </div>
+        <div class="popup-foreground">
+            <div class="container">
+                <div class="header">
+                    <h1>GO FOCUS!!</h1>
+                </div>
+                
+                <div class="input-group">
+                    <input type="text" id="siteInput" placeholder="Enter website to block (e.g., youtube.com)">
+                    <button id="addSite" class="glow-button">Block Site</button>
+                </div>
+
+                <div class="blocked-sites">
+                    <h2>Blocked Sites</h2>
+                    <ul id="blockedList"></ul>
+                </div>
+            </div>
+
+            <!-- Warning Popup -->
+            <div class="warning-overlay" id="warningOverlay">
+                <div class="warning-popup">
+                    <div class="warning-content">
+                        <div class="robot-container">
+                            <div class="robot">
+                                <div class="robot-head">
+                                    <div class="robot-face">
+                                        <div class="robot-eye left"></div>
+                                        <div class="robot-eye right"></div>
+                                        <div class="robot-mouth"></div>
+                                        <div class="robot-antenna"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quote-container">
+                            <div class="quote">It's your life, stay average<br><br><span class="heartbeat" style="text-decoration: underline;">You want that?</span></div>
+                        </div>
+                    </div>
+                    <div class="warning-buttons">
+                        <button class="btn matrix" id="confirmSuccess">
+                            <span class="matrix-label">Success – I'm Strong</span>
+                            <div class="code-rain">
+                                <div class="rain-drop" style="--i:0; animation-delay: -0.7s;"></div>
+                                <div class="rain-drop" style="--i:1; animation-delay: -0.3s;"></div>
+                                <div class="rain-drop" style="--i:2; animation-delay: -1.0s;"></div>
+                                <div class="rain-drop" style="--i:3; animation-delay: -0.1s;"></div>
+                                <div class="rain-drop" style="--i:4; animation-delay: -0.9s;"></div>
+                                <div class="rain-drop" style="--i:5; animation-delay: -0.5s;"></div>
+                                <div class="rain-drop" style="--i:6; animation-delay: -1.1s;"></div>
+                                <div class="rain-drop" style="--i:7; animation-delay: -0.2s;"></div>
+                            </div>
+                        </button>
+                        <button class="btn matrix-red" id="confirmRemove">
+                            <span class="matrix-label">Failure – Remove Anyway</span>
+                            <div class="code-rain">
+                                <div class="rain-drop" style="--i:0; animation-delay: -0.7s;"></div>
+                                <div class="rain-drop" style="--i:1; animation-delay: -0.3s;"></div>
+                                <div class="rain-drop" style="--i:2; animation-delay: -1.0s;"></div>
+                                <div class="rain-drop" style="--i:3; animation-delay: -0.1s;"></div>
+                                <div class="rain-drop" style="--i:4; animation-delay: -0.9s;"></div>
+                                <div class="rain-drop" style="--i:5; animation-delay: -0.5s;"></div>
+                                <div class="rain-drop" style="--i:6; animation-delay: -1.1s;"></div>
+                                <div class="rain-drop" style="--i:7; animation-delay: -0.2s;"></div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <script src="popup.js"></script>
+
+            <!-- Motivation Modal (hidden by default) -->
+            <div class="modal-overlay" id="modalOverlay" style="display:none;">
+                <div class="modal-content">
+                    <div class="modal-main">
+                        <div class="quote-container">
+                            <div class="quote">It's your life, stay average<br><br><span class="heartbeat" style="text-decoration: underline;">You want that?</span></div>
+                        </div>
+                    </div>
+                    <div class="modal-buttons-row">
+                        <button class="btn matrix" id="successButton">
+                            <span class="matrix-label">Success – I'm Strong</span>
+                            <div class="code-rain">
+                                <div class="rain-drop" style="--i:0; animation-delay: -0.7s;"></div>
+                                <div class="rain-drop" style="--i:1; animation-delay: -0.3s;"></div>
+                                <div class="rain-drop" style="--i:2; animation-delay: -1.0s;"></div>
+                                <div class="rain-drop" style="--i:3; animation-delay: -0.1s;"></div>
+                                <div class="rain-drop" style="--i:4; animation-delay: -0.9s;"></div>
+                                <div class="rain-drop" style="--i:5; animation-delay: -0.5s;"></div>
+                                <div class="rain-drop" style="--i:6; animation-delay: -1.1s;"></div>
+                                <div class="rain-drop" style="--i:7; animation-delay: -0.2s;"></div>
+                            </div>
+                        </button>
+                        <button class="btn matrix-red" id="failureButton">
+                            <span class="matrix-label">Failure – Remove Anyway</span>
+                            <div class="code-rain">
+                                <div class="rain-drop" style="--i:0; animation-delay: -0.7s;"></div>
+                                <div class="rain-drop" style="--i:1; animation-delay: -0.3s;"></div>
+                                <div class="rain-drop" style="--i:2; animation-delay: -1.0s;"></div>
+                                <div class="rain-drop" style="--i:3; animation-delay: -0.1s;"></div>
+                                <div class="rain-drop" style="--i:4; animation-delay: -0.9s;"></div>
+                                <div class="rain-drop" style="--i:5; animation-delay: -0.5s;"></div>
+                                <div class="rain-drop" style="--i:6; animation-delay: -1.1s;"></div>
+                                <div class="rain-drop" style="--i:7; animation-delay: -0.2s;"></div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
