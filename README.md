@@ -1,4 +1,4 @@
-# GO FOCUS - Extension
+# GO FOCUS - Extension 
 
 A honest Chrome extension that motivates you to stay focused by blocking distracting websites with reality-check motivational messages and a cyberpunk 3D look.
 
@@ -164,3 +164,4 @@ This project is open source and available under the MIT License.
 ## Author
 
 Siddharth Prabhakar - Creator of GO FOCUS Extension 
+
