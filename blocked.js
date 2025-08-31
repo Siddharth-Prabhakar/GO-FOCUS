@@ -1,7 +1,7 @@
 /**
  * Blocked Page Script for Brutal Focus Extension
  * Displays motivational quotes and handles audio/speech functionality
- */
+ */ 
 
 // Brutal motivational quotes
 const quotes = [
