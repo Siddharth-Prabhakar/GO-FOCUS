@@ -1,7 +1,7 @@
 {
   // Manifest version for Chrome extension
   "manifest_version": 3,
-  
+   
   // Extension name and version
   "name": "GO FOCUS",
   "version": "1.0",
